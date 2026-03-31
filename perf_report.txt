@@ -1,0 +1,26 @@
+VERSION v1.0
+Requests/sec: 469
+Average:      0.0205 secs
+Fastest:      0.0047 secs
+Slowest:      0.0362 secs
+
+VERSION v1.1
+Requests/sec: 418
+Average:      0.0231 secs
+Fastest:      0.0070 secs
+Slowest:      0.0357 secs
+
+VERSION v1.2
+Requests/sec: 78
+Average:      0.1239 secs
+Fastest:      0.1029 secs
+Slowest:      0.1897 secs
+
+
+Version la plus rapide → v1.0 (469 req/sec)
+
+Version la plus lente → v1.2 (78 req/sec)
+
+Pourquoi v1.2 est lente → time.sleep(0.1) force Flask à attendre 100ms avant chaque réponse
+
+Version à déployer en prod → v1.0, la plus rapide et stable
